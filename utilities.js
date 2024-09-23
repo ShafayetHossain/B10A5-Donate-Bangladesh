@@ -7,21 +7,27 @@ document.getElementById('donationBtn').addEventListener('click', function(){
     showFlipById('donationBtn');
 });
 
-function cashOut(money) {
-   const yourTotalBlance = document.getElementById('yourBlance');
-   yourTotalBlance.innerText = parseFloat(yourTotalBlance.innerText) - money;
-}
+document.getElementById('noakhaliDonateBtn').addEventListener('click', function(){
 
 
-function inputValidationById(money) {
-    if(isNaN(money) || money ==='')
-    {
-        alert("Invalid Donation amount");
-        return 0;
-    }
-    else {
+    const inputElement =  document.getElementById('noakhaliDonateInput');
+    const banceElement =  document.getElementById('noakhaliBlance');
+    showAddMoney(inputElement, banceElement);
+});
 
-        return parseFloat(money);
-    }
-}
+document.getElementById('feniiDonateBtn').addEventListener('click', function(){
+
+
+    const inputElement =  document.getElementById('feniDonateInput');
+    const banceElement =  document.getElementById('feniBlance');
+    showAddMoney(inputElement, banceElement);
+});
+
+document.getElementById('injuredDonateBtn').addEventListener('click', function(){
+
+
+    const inputElement =  document.getElementById('injuredDonateInput');
+    const banceElement =  document.getElementById('injuredBlance');
+    showAddMoney(inputElement, banceElement);
+});
 

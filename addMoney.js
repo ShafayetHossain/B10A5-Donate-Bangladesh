@@ -1,11 +1,8 @@
-document.getElementById('noakhaliDonateBtn').addEventListener('click', function(){
 
-    let noakhaliDonateMoney = document.getElementById('noakhaliDonateInput');
-    const moneyForNoakhali = inputValidationById(noakhaliDonateMoney.value);
+function showAddMoney(inputElement, blanceElement) {
 
-    let noakhaiBlanceTag = document.getElementById('noakhaliBlance');
-
-    noakhaiBlanceTag.innerText = parseFloat(noakhaiBlanceTag.innerText) + moneyForNoakhali;
-    noakhaliDonateMoney.value = '';
-    cashOut(moneyForNoakhali)
-});
+    const inputBlance = inputValidation(inputElement.value);
+    blanceElement.innerText = parseFloat(blanceElement.innerText) + inputBlance;
+    cashOut(inputBlance);
+    inputElement.value = '';
+}
