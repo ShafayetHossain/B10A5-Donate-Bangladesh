@@ -1,5 +1,5 @@
 function inputValidation(money) {
-    if(isNaN(money) || money ==='' || money < 0)
+    if(isNaN(money) || money ==='' || money <= 0)
     {
         alert("Invalid Donation amount");
         return 0;
